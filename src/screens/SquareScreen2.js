@@ -1,34 +1,31 @@
-import React, { useReducer } from "react";
+import React, { useState } from "react";
 import { View, Button, Text, StyleSheet, FlatList } from "react-native";
 import ColorCounter from "../components/ColorCounter";
 
 const COLOR_INCREMENT = 20;
 
-const reducer = (state, action) =>{
-    
-}
-
 const SquareScreen = () => {
-
-    const [state, dispatch] = useReducer(reducer, {red:0, green:0, blue:0})
+  const [red, setRed] = useState(0);
+  const [green, setGreen] = useState(0);
+  const [blue, setBlue] = useState(0);
 
   return (
     <View>
       <ColorCounter
-        onUp={() => }
-        onDown={() => }
+        onUp={() => (red < 255 ? setRed(red + COLOR_INCREMENT) : null)}
+        onDown={() => (red > 0 ? setRed(red - COLOR_INCREMENT) : null)}
         counter={red}
         color="red"
       />
       <ColorCounter
-        onUp={() => }
-        onDown={() => }
+        onUp={() => (green < 255 ? setGreen(green + COLOR_INCREMENT) : null)}
+        onDown={() => (green > 0 ? setGreen(green - COLOR_INCREMENT) : null)}
         counter={green}
         color="green"
       />
       <ColorCounter
-        onUp={() => }
-        onDown={() => }
+        onUp={() => (blue < 255 ? setBlue(blue + COLOR_INCREMENT) : null)}
+        onDown={() => (blue > 0 ? setBlue(blue - COLOR_INCREMENT) : null)}
         color="blue"
         counter={blue}
       />
