@@ -5,9 +5,9 @@ const BoxScreen = () => {
   const [name, setName] = useState("Slim Shaddy!");
   return (
     <View style={styles.view}>
-      <Text style={styles.text}>BoxScreen 1</Text>
-      <Text style={styles.text}>BoxScreen 2</Text>
-      <Text style={styles.text}>BoxScreen 3</Text>
+      <Text style={styles.box1}>Box 1</Text>
+      <Text style={styles.box2}>Box 2</Text>
+      <Text style={styles.box3}>Box 3</Text>
     </View>
   );
 };
@@ -19,13 +19,24 @@ const styles = StyleSheet.create({
     borderColor: 'red',
     padding: 10
   },
-  input: {
-    margin: 15,
+  box1: {
+    borderWidth: 3,
+    borderColor: 'blue',
+  },
+  box2: {
+    borderWidth: 3,
+    borderColor: 'blue',
+    ...StyleSheet.absoluteFillObject
+  },
+  box3: {
+    borderWidth: 3,
+    borderColor: 'blue',
   },
   view: {
     borderWidth: 5,
     borderColor: 'black',
-    margin: 20
+    margin: 20,
+    height: 200
   }, 
 });
 
