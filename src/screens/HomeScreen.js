@@ -12,12 +12,14 @@ const HomeScreen = ({ navigation }) => {
         style={styles.button}
         title="Components"
       />
-      <Button onPress={() => navigation.navigate("List")} title="List" />
-      <Button onPress={() => navigation.navigate("Image")} title="Image" />
+      <Button style={styles.button} onPress={() => navigation.navigate("List")} title="List" />
+      <Button style={styles.button} onPress={() => navigation.navigate("Image")} title="Image" />
       <Button onPress={() => navigation.navigate("Counter")} title="Counter" />
       <Button onPress={() => navigation.navigate("Color")} title="Color" />
       <Button onPress={() => navigation.navigate("Square")} title="Square" />
       <Button onPress={() => navigation.navigate("Text")} title="Text" />
+      <Button onPress={() => navigation.navigate("Box")} title="Box" />
+
       {/* <TouchableOpacity onPress={() => props.navigation.navigate('List')}>
       <Text>
         List Demo
@@ -33,6 +35,8 @@ const styles = StyleSheet.create({
   },
   button: {
     margin: 10,
+    alignItems: 'center',
+    fontSize: 30,
   },
 });
 
